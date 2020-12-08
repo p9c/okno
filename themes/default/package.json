@@ -1,0 +1,10 @@
+{
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.23.7"
+  },
+  "scripts": {
+    "start": "npx sass resources/index.scss public/index.css --watch",
+    "build": "npx sass resources/index.scss public/index.css --style=compressed"
+  }
+}
