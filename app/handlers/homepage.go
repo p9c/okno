@@ -1,7 +1,6 @@
 package handlers
 
 import (
-	"fmt"
 	pageModel "github.com/p9c/okno/app/models/page"
 	postModel "github.com/p9c/okno/app/models/post"
 	"net/http"
@@ -20,7 +19,7 @@ func (hs Handlers) Homepage(c echo.Context) error {
 		return err
 	}
 
-	fmt.Println("posts", posts)
+	//fmt.Println("posts", posts)
 	//fmt.Println("pages", pages)
 	return c.Render(
 		http.StatusOK,

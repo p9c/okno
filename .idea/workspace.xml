@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a968cd5e-e285-4169-b3cb-fa9e03c075aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/get_from_env.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/get_from_env.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/handlers/homepage.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/homepage.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/page/get_all.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/page/get_all.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/page/get_by_slug.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/page/get_by_slug.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/post/create.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post/create.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/post/get_all_by_ids.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post/get_all_by_ids.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/post/get_by_id.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post/get_by_id.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/post/get_by_slug.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post/get_by_slug.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
