@@ -3,13 +3,14 @@ package page
 import (
 	"github.com/1lann/cete"
 	postModel "github.com/p9c/okno/app/models/post"
+	"github.com/satori/go.uuid"
 	"time"
 )
 
 // Create inserts a new page to the DB
 func Create(db *cete.DB, postID string, index int, slug string, inNavigation bool) (*Page, error) {
 	page := Page{
-		//ID:           "",
+		ID:           uuid.Must(uuid.NewV4(), nil).String(),
 		PostID:       postID,
 		Index:        index,
 		Slug:         slug,

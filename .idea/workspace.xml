@@ -2,43 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a968cd5e-e285-4169-b3cb-fa9e03c075aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/okno.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.docker" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/get_from_env.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/get_from_env.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/api_pages_create.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/api_pages_create.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/api_pages_delete.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/api_pages_delete.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/api_pages_index.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/api_pages_index.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/api_pages_update.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/api_pages_update.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/api_posts_delete.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/api_posts_delete.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/api_posts_get.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/api_posts_get.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/api_posts_index.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/api_posts_index.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/handlers.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/page/create.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/page/create.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/page/delete.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/page/delete.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/page/get_all.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/page/get_all.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/page/get_by_id.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/page/get_by_id.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/page/get_by_slug.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/page/get_by_slug.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/page/page.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/page/page.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/page/update.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/page/update.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/post/create.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post/create.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/post/delete.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post/delete.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/post/get_all.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post/get_all.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/post/get_all_by_ids.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post/get_all_by_ids.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/post/get_by_id.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post/get_by_id.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/post/get_by_slug.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post/get_by_slug.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/post/post.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post/post.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/post/update.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post/update.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seed/seed.go" beforeDir="false" afterPath="$PROJECT_DIR$/seed/seed.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seed/seed_posts.go" beforeDir="false" afterPath="$PROJECT_DIR$/seed/seed_posts.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

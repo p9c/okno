@@ -2,13 +2,14 @@ package post
 
 import (
 	"github.com/1lann/cete"
+	"github.com/satori/go.uuid"
 	"time"
 )
 
 // Create inserts a new post to the database
 func Create(db *cete.DB, title string, content string, slug string, isDraft bool) (Post, error) {
 	post := Post{
-		ID:        slug,
+		ID:        uuid.Must(uuid.NewV4(), nil).String(),
 		Title:     title,
 		Content:   content,
 		Slug:      slug,

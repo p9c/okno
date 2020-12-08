@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/p9c/okno/seed"
 	"log"
 	"net/url"
 	"os"
@@ -45,8 +46,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	db.NewTable("post")
-	db.NewTable("page")
+	db.NewTable("posts")
+	db.NewTable("pages")
 
 	if contains(os.Args, "-migrate") {
 		//err = db.Migrate(dbConn, "migrations")
@@ -55,10 +56,10 @@ func main() {
 		//}
 	}
 	if contains(os.Args, "-seed") {
-		//err := seed.Seed(dbConn)
-		//if err != nil {
-		//	log.Fatal(err)
-		//}
+		err := seed.Seed(db)
+		if err != nil {
+			log.Fatal(err)
+		}
 	}
 	// Load view templates
 	renderer := template.GetRenderer("themes/%s/views/*.html", config.AppTheme)

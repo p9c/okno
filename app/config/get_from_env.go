@@ -3,7 +3,6 @@ package config
 import (
 	"errors"
 	"log"
-	"os"
 	"strconv"
 
 	"github.com/go-playground/validator/v10"
@@ -18,34 +17,34 @@ func GetFromEnv() (Config, error) {
 	if err != nil && err.Error() != "open .env: no such file or directory" {
 		log.Fatal(err)
 	}
-	appPort, err := strconv.Atoi(os.Getenv("OKNO_APP_PORT"))
+	appPort, err := strconv.Atoi("3000")
 	if err != nil {
 		return Config{}, errors.New("Invalid app port specified")
 	}
-	dbPort, err := strconv.Atoi(os.Getenv("OKNO_DB_PORT"))
+	dbPort, err := strconv.Atoi("5432")
 	if err != nil {
 		return Config{}, errors.New("Invalid db port specified")
 	}
-	appForwardWebpack, err := strconv.ParseBool(os.Getenv("OKNO_APP_FORWARD_WEBPACK"))
+	appForwardWebpack, err := strconv.ParseBool("false")
 	if err != nil {
 		return Config{}, errors.New("Invalid app forward webpack option specified")
 	}
-	dbSSL, err := strconv.ParseBool(os.Getenv("OKNO_DB_REQUIRE_SSL"))
+	dbSSL, err := strconv.ParseBool("false")
 	if err != nil {
 		return Config{}, errors.New("Invalid DB SSL option specified")
 	}
 	config := Config{
 		AppPort:           appPort,
-		AppSecret:         []byte(os.Getenv("OKNO_APP_SECRET")),
-		AppTheme:          os.Getenv("OKNO_APP_THEME"),
+		AppSecret:         []byte("secret"),
+		AppTheme:          "default",
 		AppForwardWebpack: appForwardWebpack,
-		AppUserName:       os.Getenv("OKNO_APP_USER_NAME"),
-		AppUserPassword:   []byte(os.Getenv("OKNO_APP_USER_PASS")),
-		DBHost:            os.Getenv("OKNO_DB_HOST"),
+		AppUserName:       "marcetin",
+		AppUserPassword:   []byte(`"\$2y\$12\$JbJmIwUnnXaaiZCYB8pNm.gt/KMdQ4/alJTrWWLkOasd3iNXZRpEu`),
+		DBHost:            "localhost",
 		DBPort:            dbPort,
-		DBUser:            os.Getenv("OKNO_DB_USER"),
-		DBPassword:        os.Getenv("OKNO_DB_PASS"),
-		DBName:            os.Getenv("OKNO_DB_NAME"),
+		DBUser:            "marcetin",
+		DBPassword:        "javazac",
+		DBName:            "cms",
 		DBRequireSSL:      dbSSL,
 	}
 	err = validator.New().Struct(config)

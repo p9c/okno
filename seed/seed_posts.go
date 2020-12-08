@@ -1,7 +1,7 @@
 package seed
 
 import (
-	"database/sql"
+	"github.com/1lann/cete"
 
 	postModel "github.com/p9c/okno/app/models/post"
 )
@@ -57,11 +57,11 @@ And even more content!
 	},
 }
 
-func seedPosts(conn *sql.DB) (*[]postModel.Post, error) {
+func seedPosts(db *cete.DB) (*[]postModel.Post, error) {
 	posts := []postModel.Post{}
 	for _, postBlueprint := range postBlueprints {
 		post, err := postModel.Create(
-			conn,
+			db,
 			postBlueprint.Title,
 			postBlueprint.Content,
 			postBlueprint.Slug,
