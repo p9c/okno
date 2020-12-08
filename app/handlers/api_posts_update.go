@@ -2,7 +2,6 @@ package handlers
 
 import (
 	"net/http"
-	"strconv"
 	"time"
 
 	"github.com/go-playground/validator/v10"
@@ -19,19 +18,20 @@ func (hs Handlers) APIPostsUpdate(c echo.Context) error {
 		IsDraft bool   `json:"is_draft"`
 	}
 	type Response struct {
-		ID        int       `json:"id"`
+		ID        string    `json:"id"`
 		Title     string    `json:"title"`
 		Content   string    `json:"content"`
 		IsDraft   bool      `json:"is_draft"`
 		CreatedAt time.Time `json:"created_at"`
 		UpdatedAt time.Time `json:"updated_at"`
 	}
-	id, err := strconv.Atoi(c.Param("id"))
-	if err != nil {
-		return err
-	}
+	id := c.Param("id")
+	//id, err := strconv.Atoi(c.Param("id"))
+	//if err != nil {
+	//	return err
+	//}
 	req := new(Request)
-	err = c.Bind(req)
+	err := c.Bind(req)
 	if err != nil {
 		return err
 	}

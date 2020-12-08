@@ -12,13 +12,13 @@ import (
 // APIPagesCreate creates a new page binding
 func (hs Handlers) APIPagesCreate(c echo.Context) error {
 	type Request struct {
-		PostID       int    `json:"post_id" validate:"required,min=1"`
+		PostID       string `json:"post_id" validate:"required,min=1"`
 		Index        int    `json:"index" validate:"required"`
 		Slug         string `json:"slug" validate:"required,min=1"`
 		InNavigation bool   `json:"in_navigation"`
 	}
 	type Response struct {
-		ID           int       `json:"id"`
+		ID           string    `json:"id"`
 		Index        int       `json:"index"`
 		Slug         string    `json:"slug"`
 		InNavigation bool      `json:"in_navigation"`

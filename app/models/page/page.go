@@ -7,8 +7,8 @@ import (
 )
 
 type Page struct {
-	ID           int
-	PostID       int
+	ID           string
+	PostID       string
 	Index        int
 	Slug         string
 	InNavigation bool

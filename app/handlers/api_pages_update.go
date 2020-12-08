@@ -2,7 +2,6 @@ package handlers
 
 import (
 	"net/http"
-	"strconv"
 	"time"
 
 	"github.com/go-playground/validator/v10"
@@ -13,13 +12,13 @@ import (
 // APIPagesUpdate updates a page
 func (hs Handlers) APIPagesUpdate(c echo.Context) error {
 	type Request struct {
-		PostID         int    `json:"post_id" validate:"required,min=1"`
+		PostID         string `json:"post_id" validate:"required,min=1"`
 		PositionChange int    `json:"position_change"`
 		Slug           string `json:"slug" validate:"required,min=1"`
 		InNavigation   bool   `json:"in_navigation"`
 	}
 	type Response struct {
-		ID           int       `json:"id"`
+		ID           string    `json:"id"`
 		Index        int       `json:"index"`
 		Slug         string    `json:"slug"`
 		InNavigation bool      `json:"in_navigation"`
@@ -31,10 +30,11 @@ func (hs Handlers) APIPagesUpdate(c echo.Context) error {
 	if err != nil {
 		return err
 	}
-	id, err := strconv.Atoi(c.Param("id"))
-	if err != nil {
-		return err
-	}
+	id := c.Param("id")
+	//id, err := strconv.Atoi(c.Param("id"))
+	//if err != nil {
+	//	return err
+	//}
 	err = validator.New().Struct(req)
 	if err != nil {
 		return err

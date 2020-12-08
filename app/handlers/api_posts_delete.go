@@ -2,7 +2,6 @@ package handlers
 
 import (
 	"net/http"
-	"strconv"
 	"time"
 
 	"github.com/labstack/echo"
@@ -12,17 +11,18 @@ import (
 // APIPostsDelete deletes a post
 func (hs Handlers) APIPostsDelete(c echo.Context) error {
 	type Response struct {
-		ID        int       `json:"id"`
+		ID        string    `json:"id"`
 		Title     string    `json:"title"`
 		Content   string    `json:"content"`
 		IsDraft   bool      `json:"is_draft"`
 		CreatedAt time.Time `json:"created_at"`
 		UpdatedAt time.Time `json:"updated_at"`
 	}
-	id, err := strconv.Atoi(c.Param("id"))
-	if err != nil {
-		return err
-	}
+	id := c.Param("id")
+	//id, err := strconv.Atoi(c.Param("id"))
+	//if err != nil {
+	//	return err
+	//}
 	post, err := postModel.Delete(hs.DB, id)
 	if err != nil {
 		return err

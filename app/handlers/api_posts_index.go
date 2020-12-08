@@ -12,7 +12,7 @@ import (
 // APIPostsIndex fetches all posts that were added
 func (hs Handlers) APIPostsIndex(c echo.Context) error {
 	type ResponseItem struct {
-		ID             int       `json:"id"`
+		ID             string    `json:"id"`
 		Title          string    `json:"title"`
 		ContentPreview string    `json:"content_preview"`
 		IsDraft        bool      `json:"is_draft"`

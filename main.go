@@ -6,13 +6,12 @@ import (
 	"net/url"
 	"os"
 
+	"github.com/1lann/cete"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 	"github.com/p9c/okno/app/config"
-	"github.com/p9c/okno/app/db"
 	"github.com/p9c/okno/app/handlers"
 	"github.com/p9c/okno/app/template"
-	"github.com/p9c/okno/seed"
 )
 
 func contains(arr []string, str string) bool {
@@ -41,22 +40,25 @@ func main() {
 		log.Fatal(err)
 	}
 	// Get the database connection
-	dbConn, err := db.Init(config.GetDBConnString())
-	defer dbConn.Close()
+	db, err := cete.Open("./cete_data")
+	defer db.Close()
 	if err != nil {
 		log.Fatal(err)
 	}
+	db.NewTable("post")
+	db.NewTable("page")
+
 	if contains(os.Args, "-migrate") {
-		err = db.Migrate(dbConn, "migrations")
-		if err != nil {
-			log.Fatal(err)
-		}
+		//err = db.Migrate(dbConn, "migrations")
+		//if err != nil {
+		//	log.Fatal(err)
+		//}
 	}
 	if contains(os.Args, "-seed") {
-		err := seed.Seed(dbConn)
-		if err != nil {
-			log.Fatal(err)
-		}
+		//err := seed.Seed(dbConn)
+		//if err != nil {
+		//	log.Fatal(err)
+		//}
 	}
 	// Load view templates
 	renderer := template.GetRenderer("themes/%s/views/*.html", config.AppTheme)
@@ -74,7 +76,7 @@ func main() {
 	)
 	// Init the handlers object
 	hs := handlers.Handlers{
-		DB:     dbConn,
+		DB:     db,
 		Config: config,
 	}
 	// Public routes

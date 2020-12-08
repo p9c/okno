@@ -3,6 +3,7 @@ module github.com/p9c/okno
 go 1.13
 
 require (
+	github.com/1lann/cete v0.2.1
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/go-playground/validator/v10 v10.0.1
 	github.com/golang-migrate/migrate/v4 v4.7.0

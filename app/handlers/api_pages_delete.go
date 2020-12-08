@@ -2,7 +2,6 @@ package handlers
 
 import (
 	"net/http"
-	"strconv"
 	"time"
 
 	"github.com/labstack/echo"
@@ -12,17 +11,18 @@ import (
 // APIPagesDelete deletes a page binding
 func (hs Handlers) APIPagesDelete(c echo.Context) error {
 	type Response struct {
-		ID           int       `json:"id"`
+		ID           string    `json:"id"`
 		Index        int       `json:"index"`
 		Slug         string    `json:"slug"`
 		InNavigation bool      `json:"in_navigation"`
 		CreatedAt    time.Time `json:"created_at"`
 		UpdatedAt    time.Time `json:"updated_at"`
 	}
-	id, err := strconv.Atoi(c.Param("id"))
-	if err != nil {
-		return err
-	}
+	id := c.Param("id")
+	//id, err := strconv.Atoi(c.Param("id"))
+	//if err != nil {
+	//	return err
+	//}
 	page, err := pageModel.GetByID(hs.DB, id)
 	if err != nil {
 		return err

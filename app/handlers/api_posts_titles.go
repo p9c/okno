@@ -10,7 +10,7 @@ import (
 // APIPostsTitles gets titles of posts for select elements
 func (hs Handlers) APIPostsTitles(c echo.Context) error {
 	type ResponseItem struct {
-		ID    int    `json:"id"`
+		ID    string `json:"id"`
 		Title string `json:"title"`
 	}
 	posts, err := postModel.GetAll(hs.DB, -1)

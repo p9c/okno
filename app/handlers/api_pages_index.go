@@ -11,15 +11,15 @@ import (
 // APIPagesIndex shows all pages
 func (hs Handlers) APIPagesIndex(c echo.Context) error {
 	type ResponseItemPost struct {
-		ID             int       `json:"id"`
+		ID             string    `json:"id"`
 		Title          string    `json:"title"`
 		ContentPreview string    `json:"content_preview"`
 		CreatedAt      time.Time `json:"created_at"`
 		UpdatedAt      time.Time `json:"updated_at"`
 	}
 	type ResponseItem struct {
-		ID           int              `json:"id"`
-		PostID       int              `json:"post_id"`
+		ID           string           `json:"id"`
+		PostID       string           `json:"post_id"`
 		Index        int              `json:"index"`
 		Slug         string           `json:"slug"`
 		InNavigation bool             `json:"in_navigation"`

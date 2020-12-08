@@ -18,34 +18,34 @@ func GetFromEnv() (Config, error) {
 	if err != nil && err.Error() != "open .env: no such file or directory" {
 		log.Fatal(err)
 	}
-	appPort, err := strconv.Atoi(os.Getenv("APP_PORT"))
+	appPort, err := strconv.Atoi(os.Getenv("OKNO_APP_PORT"))
 	if err != nil {
 		return Config{}, errors.New("Invalid app port specified")
 	}
-	dbPort, err := strconv.Atoi(os.Getenv("DB_PORT"))
+	dbPort, err := strconv.Atoi(os.Getenv("OKNO_DB_PORT"))
 	if err != nil {
 		return Config{}, errors.New("Invalid db port specified")
 	}
-	appForwardWebpack, err := strconv.ParseBool(os.Getenv("APP_FORWARD_WEBPACK"))
+	appForwardWebpack, err := strconv.ParseBool(os.Getenv("OKNO_APP_FORWARD_WEBPACK"))
 	if err != nil {
 		return Config{}, errors.New("Invalid app forward webpack option specified")
 	}
-	dbSSL, err := strconv.ParseBool(os.Getenv("DB_REQUIRE_SSL"))
+	dbSSL, err := strconv.ParseBool(os.Getenv("OKNO_DB_REQUIRE_SSL"))
 	if err != nil {
 		return Config{}, errors.New("Invalid DB SSL option specified")
 	}
 	config := Config{
 		AppPort:           appPort,
-		AppSecret:         []byte(os.Getenv("APP_SECRET")),
-		AppTheme:          os.Getenv("APP_THEME"),
+		AppSecret:         []byte(os.Getenv("OKNO_APP_SECRET")),
+		AppTheme:          os.Getenv("OKNO_APP_THEME"),
 		AppForwardWebpack: appForwardWebpack,
-		AppUserName:       os.Getenv("APP_USER_NAME"),
-		AppUserPassword:   []byte(os.Getenv("APP_USER_PASS")),
-		DBHost:            os.Getenv("DB_HOST"),
+		AppUserName:       os.Getenv("OKNO_APP_USER_NAME"),
+		AppUserPassword:   []byte(os.Getenv("OKNO_APP_USER_PASS")),
+		DBHost:            os.Getenv("OKNO_DB_HOST"),
 		DBPort:            dbPort,
-		DBUser:            os.Getenv("DB_USER"),
-		DBPassword:        os.Getenv("DB_PASS"),
-		DBName:            os.Getenv("DB_NAME"),
+		DBUser:            os.Getenv("OKNO_DB_USER"),
+		DBPassword:        os.Getenv("OKNO_DB_PASS"),
+		DBName:            os.Getenv("OKNO_DB_NAME"),
 		DBRequireSSL:      dbSSL,
 	}
 	err = validator.New().Struct(config)
