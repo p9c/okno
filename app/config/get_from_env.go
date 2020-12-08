@@ -39,11 +39,11 @@ func GetFromEnv() (Config, error) {
 		AppTheme:          "default",
 		AppForwardWebpack: appForwardWebpack,
 		AppUserName:       "marcetin",
-		AppUserPassword:   []byte(`"\$2y\$12\$JbJmIwUnnXaaiZCYB8pNm.gt/KMdQ4/alJTrWWLkOasd3iNXZRpEu`),
+		AppUserPassword:   []byte(`\$2y\$12\$JbJmIwUnnXaaiZCYB8pNm.gt/KMdQ4/alJTrWWLkOasd3iNXZRpEu`),
 		DBHost:            "localhost",
 		DBPort:            dbPort,
 		DBUser:            "marcetin",
-		DBPassword:        "javazac",
+		DBPassword:        "",
 		DBName:            "cms",
 		DBRequireSSL:      dbSSL,
 	}
