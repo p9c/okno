@@ -2,8 +2,6 @@ package page
 
 import (
 	"github.com/1lann/cete"
-
-	"github.com/p9c/okno/app/models/post"
 )
 
 // GetAll returns all pages from the database
@@ -12,7 +10,7 @@ func GetAll(db *cete.DB, withPosts bool) (*[]Page, error) {
 	//if err != nil {
 	//	return nil, err
 	//}
-	rows := db.Table("people").All()
+	rows := db.Table("pages").All()
 
 	pages := []Page{}
 	postIds := []string{}
@@ -35,21 +33,21 @@ func GetAll(db *cete.DB, withPosts bool) (*[]Page, error) {
 		postIds = append(postIds, page.PostID)
 	}
 	if withPosts {
-		posts, err := post.GetAllByIds(db, postIds)
-		if err != nil {
-			return nil, err
-		}
-		pagesWithPosts := []Page{}
-		for _, page := range pages {
-			pageWithPost := page
-			for _, post := range *posts {
-				if page.PostID == post.ID {
-					pageWithPost.Post = post
-				}
-			}
-			pagesWithPosts = append(pagesWithPosts, pageWithPost)
-		}
-		pages = pagesWithPosts
+		//posts, err := post.GetAllByIds(db, postIds)
+		//if err != nil {
+		//	return nil, err
+		//}
+		//pagesWithPosts := []Page{}
+		//for _, page := range pages {
+		//	pageWithPost := page
+		//	for _, post := range *posts {
+		//		if page.PostID == post.ID {
+		//			pageWithPost.Post = post
+		//		}
+		//	}
+		//	pagesWithPosts = append(pagesWithPosts, pageWithPost)
+		//}
+		//pages = pagesWithPosts
 	}
 	return &pages, nil
 }

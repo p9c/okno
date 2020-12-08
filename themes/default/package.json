@@ -1,7 +1,7 @@
 {
   "dependencies": {},
   "devDependencies": {
-    "sass": "^1.23.7"
+    "sass": "^1.30.0"
   },
   "scripts": {
     "start": "npx sass resources/index.scss public/index.css --watch",

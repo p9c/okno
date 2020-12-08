@@ -7,7 +7,7 @@ import (
 // GetBySlug gets the page with the slug specified from the DB
 func GetBySlug(db *cete.DB, slug string) (*Page, error) {
 	page := Page{}
-	db.Table("people").Index("Age").One(10, &page)
+	db.Table("pages").Index("Age").One(10, &page)
 	//err := db.QueryRow("SELECT * FROM pages WHERE slug = $1", slug).Scan(
 	//	&page.ID,
 	//	&page.PostID,

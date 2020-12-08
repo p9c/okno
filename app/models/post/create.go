@@ -39,7 +39,7 @@ func Create(db *cete.DB, title string, content string, slug string, isDraft bool
 	//if err != nil {
 	//	return Post{}, err
 	//}
-	db.Table("posts").Set(slug, post)
+	db.Table("posts").Set(post.ID, post)
 
 	return post, nil
 }

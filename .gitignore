@@ -21,6 +21,6 @@
 
 /cover.out
 /cover.html
-
+/cete_data
 /public/*
 !/public/.gitkeep

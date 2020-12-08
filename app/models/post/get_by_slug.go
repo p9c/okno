@@ -7,7 +7,7 @@ import (
 // GetBySlug fetches the post from the database by its URL slug
 func GetBySlug(db *cete.DB, slug string) (*Post, error) {
 	var post Post
-	posts := db.Table("people").All()
+	posts := db.Table("posts").All()
 	for posts.Next() {
 		var p Post
 		posts.Decode(&p)

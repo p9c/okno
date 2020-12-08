@@ -23,7 +23,7 @@ func GetByID(db *cete.DB, id string) (*Post, error) {
 	//	return nil, err
 	//}
 
-	db.Table("people").Get(id, &post)
+	db.Table("posts").Get(id, &post)
 
 	return &post, nil
 }

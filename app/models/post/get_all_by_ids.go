@@ -17,7 +17,7 @@ func GetAllByIds(db *cete.DB, ids []string) (*[]Post, error) {
 
 	for _, id := range ids {
 		post := Post{}
-		db.Table("people").Get(id, &post)
+		db.Table("posts").Get(id, &post)
 		posts = append(posts, post)
 	}
 	//for rows.Next() {

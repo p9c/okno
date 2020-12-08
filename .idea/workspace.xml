@@ -4,14 +4,15 @@
     <list default="true" id="a968cd5e-e285-4169-b3cb-fa9e03c075aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/get_from_env.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/get_from_env.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/page/create.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/page/create.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/handlers/homepage.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/homepage.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/page/get_all.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/page/get_all.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/page/get_by_slug.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/page/get_by_slug.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/post/create.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post/create.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seed/seed.go" beforeDir="false" afterPath="$PROJECT_DIR$/seed/seed.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seed/seed_posts.go" beforeDir="false" afterPath="$PROJECT_DIR$/seed/seed_posts.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/post/get_all_by_ids.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post/get_all_by_ids.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/post/get_by_id.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post/get_by_id.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/post/get_by_slug.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post/get_by_slug.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/default/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/themes/default/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,10 +41,11 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/TMP/yuzu-cms" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
