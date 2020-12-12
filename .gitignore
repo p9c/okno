@@ -18,7 +18,7 @@
 /__debug_bin
 /node_modules
 /bin
-
+/DATABASE
 /cover.out
 /cover.html
 /cete_data

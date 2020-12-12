@@ -1,14 +1,14 @@
 package page
 
 import (
-	"github.com/1lann/cete"
-	postModel "github.com/p9c/okno/app/models/post"
+	postModel "github.com/p9c/okno/OLDapp/models/post"
+	"github.com/p9c/okno/app/jdb"
 	"github.com/satori/go.uuid"
 	"time"
 )
 
 // Create inserts a new page to the DB
-func Create(db *cete.DB, postID string, index int, slug string, inNavigation bool) (*Page, error) {
+func Create(j *jdb.JDB, postID string, index int, slug string, inNavigation bool) (*Page, error) {
 	page := Page{
 		ID:           uuid.Must(uuid.NewV4(), nil).String(),
 		PostID:       postID,
@@ -43,6 +43,6 @@ func Create(db *cete.DB, postID string, index int, slug string, inNavigation boo
 	//if err != nil {
 	//	return nil, err
 	//}
-	db.Table("pages").Set(postID, page)
+	//db.Table("pages").Set(postID, page)
 	return &page, nil
 }

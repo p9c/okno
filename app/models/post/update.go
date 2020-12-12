@@ -1,12 +1,12 @@
 package post
 
 import (
-	"github.com/1lann/cete"
+	scribble "github.com/nanobox-io/golang-scribble"
 	"time"
 )
 
 // Update the DB record for a post
-func Update(db *cete.DB, id string, title string, content string, slug string, isDraft bool) (Post, error) {
+func Update(db *scribble.Driver, id string, title string, content []byte, slug string, isDraft bool) (Post, error) {
 	post := Post{
 		ID:        id,
 		Title:     title,
@@ -15,7 +15,7 @@ func Update(db *cete.DB, id string, title string, content string, slug string, i
 		IsDraft:   isDraft,
 		UpdatedAt: time.Now(),
 	}
-	db.Table("posts").Update(id, post)
+	//db.Table("posts").Update(id, post)
 	//err := conn.QueryRow(`
 	//    UPDATE posts
 	//    SET title = $2, content = $3, slug = $4, is_draft = $5, updated_at = NOW()
