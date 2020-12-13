@@ -5,9 +5,9 @@ import LogIn from './LogIn.svelte';
 import { jwt, notifications } from '../stores';
 
 describe('Log in page', () => {
-  it('has a OKNO heading', () => {
+  it('has a okno heading', () => {
     const { getByText } = render(LogIn);
-    const heading = getByText('OKNO');
+    const heading = getByText('okno');
     expect(heading).toBeInstanceOf(HTMLHeadingElement);
   });
   it('sends the log in form', async () => {

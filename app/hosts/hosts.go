@@ -1,11 +1,10 @@
 package hosts
 
 import (
-	"encoding/json"
-	"fmt"
 	"github.com/gorilla/mux"
 	scribble "github.com/nanobox-io/golang-scribble"
-	"net/http"
+	"github.com/p9c/okno/app/handlers"
+	"github.com/p9c/okno/app/jdb"
 )
 
 type Host struct {
@@ -13,28 +12,30 @@ type Host struct {
 	Slug   string
 	Host   string
 	Routes func(r *mux.Router)
-	Db     *scribble.Driver
 }
 
-func GetHosts() []*Host {
+func GetHosts(db *scribble.Driver) []*Host {
 	return []*Host{
-		okno(),
+		okno(db),
 	}
 }
 
-func okno() *Host {
+func okno(db *scribble.Driver) *Host {
 	////////////////
-	// OKNO.rS
+	// okno.rS
 	////////////////
 	host := &Host{
-		Name: "OKNO",
+		Name: "okno",
 		Slug: "okno",
 		Host: "okno.rs",
 	}
+
+	h := handlers.Handlers{jdb.NewJDB(db, host.Slug)}
+
 	routes := func(r *mux.Router) {
 		r.Headers("X-Requested-With", "XMLHttpRequest")
-		r.Host(host.Host).Path("/").HandlerFunc(host.ApiData()).Name("comhttpus")
-		r.Host(host.Host).Path("/{coin}").HandlerFunc(host.ApiData()).Name("comhttpus")
+		r.Host(host.Host).Path("/").HandlerFunc(h.Homepage()).Name("comhttpus")
+		r.Host(host.Host).Path("/{coin}").HandlerFunc(h.Homepage()).Name("comhttpus")
 		//r.Host(okno).Path("/coins/").HandlerFunc(rts.Coins).Methods("GET")
 		//r.Host(okno).Path("/bitnodes/").HandlerFunc(rts.BitNodes).Methods("GET")
 		//r.Host(okno).Path("/bitnodes/{coin}/{nodeid}").HandlerFunc(rts.BitNode).Methods("GET")
@@ -48,23 +49,23 @@ func okno() *Host {
 	return host
 }
 
-func (h *Host) ApiData() func(w http.ResponseWriter, r *http.Request) {
-	return func(w http.ResponseWriter, r *http.Request) {
-		fmt.Println("Asas")
-		vars := mux.Vars(r)
-		w.WriteHeader(http.StatusOK)
-		fmt.Println("asasasassa")
-		//fmt.Fprintf(w, "Category: %v\n", vars["coin"])
-
-		//profile := Profile{"Alex", []string{"snowboarding", "programming"}}
-
-		js, err := json.Marshal(vars)
-		if err != nil {
-			http.Error(w, err.Error(), http.StatusInternalServerError)
-			return
-		}
-
-		w.Header().Set("Content-Type", "application/json")
-		w.Write(js)
-	}
-}
+//func (h *Host) ApiData() func(w http.ResponseWriter, r *http.Request) {
+//	return func(w http.ResponseWriter, r *http.Request) {
+//		fmt.Println("Asas")
+//		vars := mux.Vars(r)
+//		w.WriteHeader(http.StatusOK)
+//		fmt.Println("asasasassa")
+//		//fmt.Fprintf(w, "Category: %v\n", vars["coin"])
+//
+//		//profile := Profile{"Alex", []string{"snowboarding", "programming"}}
+//
+//		js, err := json.Marshal(vars)
+//		if err != nil {
+//			http.Error(w, err.Error(), http.StatusInternalServerError)
+//			return
+//		}
+//
+//		w.Header().Set("Content-Type", "application/json")
+//		w.Write(js)
+//	}
+//}

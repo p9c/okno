@@ -6,7 +6,7 @@ import (
 )
 
 // Update the DB record for a post
-func Update(db *scribble.Driver, id string, title string, content []byte, slug string, isDraft bool) (Post, error) {
+func Update(db *scribble.Driver, id string, title string, content string, slug string, isDraft bool) (Post, error) {
 	post := Post{
 		ID:        id,
 		Title:     title,

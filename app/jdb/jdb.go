@@ -24,16 +24,6 @@ func NewJDB(db *scribble.Driver, path string) *JDB {
 	}
 }
 
-// If a variable has an interface type, then we can call
-// methods that are in the named interface. Here's a
-// generic `measure` function taking advantage of this
-// to work on any `geometry`.
-func measure(g geometry) {
-	fmt.Println(g)
-	fmt.Println(g.area())
-	fmt.Println(g.perim())
-}
-
 // DB is the central database for jorm
 //var DB, _ = scribble.New(cfg.Dir, nil)
 
@@ -44,13 +34,10 @@ func (j *JDB) Read(id string) (data interface{}, err error) {
 }
 
 // Read all items from the database, unmarshaling the response.
-func (j *JDB) ReadAll() (data []interface{}, err error) {
-	records, err := j.db.ReadAll(j.path)
+func (j *JDB) ReadAll() (data []string, err error) {
+	data, err = j.db.ReadAll(j.path)
 	if err != nil {
 		fmt.Println("Error", err)
-	}
-	for _, d := range records {
-		data = append(data, d)
 	}
 	return
 }

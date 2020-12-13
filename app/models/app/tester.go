@@ -1,6 +1,6 @@
 package app
 
-//func (o *OKNO) tester() *host.Host {
+//func (o *okno) tester() *host.Host {
 //	return &host.Host{
 //		Host:     "test.okno.rs:1323",
 //		Renderer: template.GetRenderer("themes/%s/views/*.html", o.Config.AppTheme),

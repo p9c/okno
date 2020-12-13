@@ -1,15 +1,25 @@
 package post
 
 import (
-	scribble "github.com/nanobox-io/golang-scribble"
+	"encoding/json"
+	"fmt"
+	"github.com/p9c/okno/app/jdb"
 )
 
 // GetAll gets all posts that match a criteria
 // isDraft doesn't look at the is_draft criteria if set to -1, only finds
 // non-drafts if set to 0 and only rafts if set to 1
-func GetAll(db *scribble.Driver, isDraft int) (*[]Post, error) {
-	//var rows *sql.Rows
-	var err error
+func GetAll(j *jdb.JDB, isDraft int) (*[]Post, error) {
+	var posts []Post
+	ps, err := j.ReadAll()
+	for _, postInterface := range ps {
+		var p Post
+		if err := json.Unmarshal([]byte(postInterface), &p); err != nil {
+			fmt.Println("Error", err)
+		}
+		posts = append(posts, p)
+	}
+
 	if isDraft < 0 {
 		//rows, err = conn.Query(`
 		//    SELECT * FROM posts
@@ -25,7 +35,7 @@ func GetAll(db *scribble.Driver, isDraft int) (*[]Post, error) {
 	if err != nil {
 		return nil, err
 	}
-	posts := []Post{}
+	//posts := []Post{}
 	//for rows.Next() {
 	post := Post{}
 	//err := rows.Scan(

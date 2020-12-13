@@ -39,10 +39,10 @@ func NewOKNO() *OKNO {
 	}
 
 	var r = mux.NewRouter()
-	for _, host := range hosts.GetHosts() {
+	for _, host := range hosts.GetHosts(o.Database) {
 		host.Routes(r)
 
-		seed.Seed(jdb.NewJDB(o.Database, host.Name))
+		seed.Seed(jdb.NewJDB(o.Database, host.Slug))
 	}
 	srv := &http.Server{
 		Handler: handlers.CORS()(handlers.CompressHandler(r)),

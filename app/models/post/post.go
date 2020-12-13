@@ -13,8 +13,8 @@ import (
 type Post struct {
 	ID             string
 	Title          string
-	Content        []byte
-	ContentPreview []byte
+	Content        string
+	ContentPreview string
 	Slug           string
 	IsDraft        bool
 	Published      bool
@@ -30,7 +30,7 @@ type item struct {
 
 // GetHTMLContent returns the post's markdown content as HTML
 func (p *Post) GetHTMLContent() template.HTML {
-	str := string(blackfriday.Run(p.Content))
+	str := string(blackfriday.Run([]byte(p.Content)))
 	return template.HTML(str)
 }
 
