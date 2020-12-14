@@ -17,6 +17,8 @@
 /.env
 /__debug_bin
 /node_modules
+/js/node_modules
+/js/public
 /bin
 /DATABASE
 /cover.out

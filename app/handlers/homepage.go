@@ -27,7 +27,7 @@ func (hs *Handlers) Homepage() func(w http.ResponseWriter, r *http.Request) {
 	//    //map[string]interface{}{"posts": posts, "pages": pages},
 	//    map[string]interface{}{"posts": posts},
 	//)
-	renderer := template.GetRenderer("./themes/%s/views/*.html", "default")
+	renderer := template.GetRenderer("./js/themes/%s/views/*.html", "default")
 
 	return func(w http.ResponseWriter, r *http.Request) {
 		//fmt.Println("Asas")

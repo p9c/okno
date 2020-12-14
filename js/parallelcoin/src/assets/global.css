@@ -1,0 +1,20 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'Plan9';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('Plan9'),
+    local('Plan9'),
+    url('plan9/files/plan9.woff2') format('woff2'), /* Super Modern Browsers */
+    url('plan9/files/plan9.woff') format('woff'); /* Modern Browsers */
+}
+
+body {
+  @apply text-white-default;
+}

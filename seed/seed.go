@@ -7,6 +7,7 @@ import (
 )
 
 func Seed(j *jdb.JDB) error {
+	j.Collection("posts")
 	posts, err := seedPosts(j)
 	if err != nil {
 		return err

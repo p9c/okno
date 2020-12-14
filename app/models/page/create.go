@@ -1,8 +1,8 @@
 package page
 
 import (
-	postModel "github.com/p9c/okno/OLDapp/models/post"
 	"github.com/p9c/okno/app/jdb"
+	"github.com/p9c/okno/app/models/post"
 	"github.com/satori/go.uuid"
 	"time"
 )
@@ -17,7 +17,7 @@ func Create(j *jdb.JDB, postID string, index int, slug string, inNavigation bool
 		InNavigation: inNavigation,
 		CreatedAt:    time.Now(),
 		UpdatedAt:    time.Now(),
-		Post:         postModel.Post{},
+		Post:         post.Post{},
 	}
 
 	//err := conn.QueryRow(`

@@ -2,7 +2,7 @@ package config
 
 // Config represents the configuration of the CMS instance
 type Config struct {
-	AppPort           int    `validate:"required,min=1,max=49151"`
+	AppPort           string `validate:"required,min=1,max=49151"`
 	AppSecret         []byte `validate:"required"`
 	AppTheme          string `validate:"required"`
 	AppForwardWebpack bool

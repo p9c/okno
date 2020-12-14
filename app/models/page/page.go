@@ -3,7 +3,7 @@ package page
 import (
 	"time"
 
-	"github.com/p9c/okno/OLDapp/models/post"
+	"github.com/p9c/okno/app/models/post"
 )
 
 type Page struct {

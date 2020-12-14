@@ -1,53 +1,55 @@
 package host
 
 import (
-	"github.com/labstack/echo/v4"
-	"github.com/labstack/echo/v4/middleware"
+	"github.com/gorilla/mux"
 	scribble "github.com/nanobox-io/golang-scribble"
-	"github.com/p9c/okno/OLDapp/config"
-	"github.com/p9c/okno/OLDapp/handlers"
-	"github.com/p9c/okno/OLDapp/template"
+	"github.com/p9c/okno/app/auth"
+	"github.com/p9c/okno/app/handlers"
+	"github.com/p9c/okno/app/jdb"
 	"net/http"
 )
 
-func api(c config.Config, db *scribble.Driver) *Host {
-	//-----
-	// API
-	//-----
-	// Init Echo
-	api := echo.New()
-	// Set our template renderer as the renderer for Echo
-	api.Renderer = template.GetRenderer("themes/%s/views/*.html", c.AppTheme)
-	api.Use(middleware.Logger())
-	api.Use(middleware.Recover())
-	api.GET("/", func(e echo.Context) error {
-		return e.String(http.StatusOK, "API")
-	})
-	//// Init the handlers object
-	hs := handlers.Handlers{
-		DB:     db,
-		Config: c,
+func api(db *scribble.Driver) *Host {
+	////////////////
+	// api.okno.RS
+	////////////////
+	host := &Host{
+		Name: "Api",
+		Slug: "api",
+		Host: "api.okno.rs",
 	}
+	h := handlers.Handlers{jdb.NewJDB(db, host.Slug)}
+	routes := func(r *mux.Router) {
+		s := r.Host(host.Host).Subrouter()
+		s.Use(CommonMiddleware)
+		host.testRoutes(r)
+		s.HandleFunc("/register", h.APICreateUser).Methods("POST")
+		s.HandleFunc("/login", h.APILogin()).Methods("POST")
+		//Auth route
+		a := r.PathPrefix("/auth").Subrouter()
+		a.Use(auth.JwtVerify)
+		a.HandleFunc("/user", h.APIFetchUsers).Methods("GET")
+		a.HandleFunc("/user/{id}", h.APIGetUser).Methods("GET")
+		a.HandleFunc("/user/{id}", h.APIUpdateUser).Methods("PUT")
+		a.HandleFunc("/user/{id}", h.APIDeleteUser).Methods("DELETE")
 
-	//// Auth-only v1 API routes
-	v1auth := api.Group("/api/v1")
-	v1auth.Use(middleware.JWT(c.AppSecret))
-	v1auth.GET("/posts", hs.APIPostsIndex)
-	v1auth.GET("/posts/titles", hs.APIPostsTitles)
-	v1auth.GET("/posts/:id", hs.APIPostsGet)
-	v1auth.POST("/posts", hs.APIPostsCreate)
-	v1auth.PUT("/posts/:id", hs.APIPostsUpdate)
-	v1auth.DELETE("/posts/:id", hs.APIPostsDelete)
-	v1auth.GET("/pages", hs.APIPagesIndex)
-	v1auth.POST("/pages", hs.APIPagesCreate)
-	v1auth.PUT("/pages/:id", hs.APIPagesUpdate)
-	v1auth.DELETE("/pages/:id", hs.APIPagesDelete)
-	//connStr := fmt.Sprintf(":%d", c.AppPort)
-	////Start the server
-	//api.Logger.Fatal(api.Start(connStr))
-	//
-	return &Host{
-		Host: "api.okno.rs:3333",
-		Echo: api,
+		a.HandleFunc("/post", h.APIFetchUsers).Methods("GET")
+		a.HandleFunc("/post/{id}", h.APIGetUser).Methods("GET")
+		a.HandleFunc("/post/{id}", h.APIUpdateUser).Methods("PUT")
+		a.HandleFunc("/post/{id}", h.APIDeleteUser).Methods("DELETE")
 	}
+	host.Routes = routes
+
+	return host
+}
+
+// CommonMiddleware --Set content-type
+func CommonMiddleware(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Add("Content-Type", "application/json")
+		w.Header().Set("Access-Control-Allow-Origin", "*")
+		w.Header().Set("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE")
+		w.Header().Set("Access-Control-Allow-Headers", "Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, Access-Control-Request-Headers, Access-Control-Request-Method, Connection, Host, Origin, User-Agent, Referer, Cache-Control, X-header")
+		next.ServeHTTP(w, r)
+	})
 }

@@ -10,6 +10,7 @@ import (
 // isDraft doesn't look at the is_draft criteria if set to -1, only finds
 // non-drafts if set to 0 and only rafts if set to 1
 func GetAll(j *jdb.JDB, isDraft int) (*[]Post, error) {
+	j.Collection("posts")
 	var posts []Post
 	ps, err := j.ReadAll()
 	for _, postInterface := range ps {

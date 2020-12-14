@@ -1,11 +1,8 @@
 package handlers
 
-import (
-	"github.com/labstack/echo/v4"
-)
-
 // Post renders a page with a post
-func (hs Handlers) Post(c echo.Context) error {
+func (hs Handlers) Post() error {
+	hs.Collection("posts")
 	//post, err := postModel.GetBySlug(hs.DB, c.Param("slug"))
 	//if err != nil {
 	//	if err == sql.ErrNoRows {
