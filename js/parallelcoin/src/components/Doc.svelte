@@ -1,4 +1,5 @@
 <script lang="js">
+  import Shadow from '../../../components/txt/Shadow.svelte';
 
 </script>
 
@@ -8,7 +9,7 @@
 <div id="it-is-environmentally-friendly" class="step slide" data-x="292" data-y="-128" data-scale="0.05" _data-autoplay="10">
   <div class="w-slide h-slide  flex flex-col justify-center items-center">
     <div class="p-10 w-full font-brand uppercase text-4xl font-bold text-center">
-      It is environmentally friendly.
+      <Shadow>ParallelCoin documentation</Shadow>
     </div>
     <div>
       ParallelCoin ParallelCoin ParallelCoin

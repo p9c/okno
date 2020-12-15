@@ -9,14 +9,14 @@ func beliRS(db *scribble.Driver) *Host {
 	////////////////
 	// parallelcoin.IO
 	////////////////
-	host := &Host{
+	h := &Host{
 		Name: "Beli",
 		Slug: "beli_rs",
 		Host: "beli.rs",
 	}
 	routes := func(r *mux.Router) {
-		host.testRoutes(r)
+		h.testRoutes(r)
 	}
-	host.Routes = routes
-	return host
+	h.Routes = routes
+	return h
 }

@@ -13,34 +13,34 @@ func api(db *scribble.Driver) *Host {
 	////////////////
 	// api.okno.RS
 	////////////////
-	host := &Host{
+	h := &Host{
 		Name: "Api",
 		Slug: "api",
 		Host: "api.okno.rs",
 	}
-	h := handlers.Handlers{jdb.NewJDB(db, host.Slug)}
+	hs := handlers.Handlers{jdb.NewJDB(db, h.Slug)}
 	routes := func(r *mux.Router) {
-		s := r.Host(host.Host).Subrouter()
+		s := h.sub(r)
 		s.Use(CommonMiddleware)
-		host.testRoutes(r)
-		s.HandleFunc("/register", h.APICreateUser).Methods("POST")
-		s.HandleFunc("/login", h.APILogin()).Methods("POST")
+		h.testRoutes(r)
+		s.HandleFunc("/register", hs.APICreateUser).Methods("POST")
+		s.HandleFunc("/login", hs.APILogin()).Methods("POST")
 		//Auth route
 		a := r.PathPrefix("/auth").Subrouter()
 		a.Use(auth.JwtVerify)
-		a.HandleFunc("/user", h.APIFetchUsers).Methods("GET")
-		a.HandleFunc("/user/{id}", h.APIGetUser).Methods("GET")
-		a.HandleFunc("/user/{id}", h.APIUpdateUser).Methods("PUT")
-		a.HandleFunc("/user/{id}", h.APIDeleteUser).Methods("DELETE")
+		a.HandleFunc("/user", hs.APIFetchUsers).Methods("GET")
+		a.HandleFunc("/user/{id}", hs.APIGetUser).Methods("GET")
+		a.HandleFunc("/user/{id}", hs.APIUpdateUser).Methods("PUT")
+		a.HandleFunc("/user/{id}", hs.APIDeleteUser).Methods("DELETE")
 
-		a.HandleFunc("/post", h.APIFetchUsers).Methods("GET")
-		a.HandleFunc("/post/{id}", h.APIGetUser).Methods("GET")
-		a.HandleFunc("/post/{id}", h.APIUpdateUser).Methods("PUT")
-		a.HandleFunc("/post/{id}", h.APIDeleteUser).Methods("DELETE")
+		a.HandleFunc("/post", hs.APIFetchUsers).Methods("GET")
+		a.HandleFunc("/post/{id}", hs.APIGetUser).Methods("GET")
+		a.HandleFunc("/post/{id}", hs.APIUpdateUser).Methods("PUT")
+		a.HandleFunc("/post/{id}", hs.APIDeleteUser).Methods("DELETE")
 	}
-	host.Routes = routes
+	h.Routes = routes
 
-	return host
+	return h
 }
 
 // CommonMiddleware --Set content-type

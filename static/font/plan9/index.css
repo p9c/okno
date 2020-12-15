@@ -9,8 +9,8 @@
   src:
     local('plan9regular '),
     local('plan9regular'),
-    url('./files/plan9.woff2') format('woff2'), /* Super Modern Browsers */
-    url('./files/plan9.woff') format('woff'); /* Modern Browsers */
+    url('plan9.woff2') format('woff2'), /* Super Modern Browsers */
+    url('plan9.woff') format('woff'); /* Modern Browsers */
 }
 
 

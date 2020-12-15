@@ -9,7 +9,7 @@
     <div class="p-10 w-full font-brand uppercase text-4xl font-bold text-left">
       Improves physical and mental health.<br/>Full body exercise. Intense energy release.
     </div>
-    <div>
+    <div class="p-10 w-full font-brand uppercase text-1xl font-bold text-left">
       ParallelCoin ParallelCoin ParallelCoin
       ParallelCoin ParallelCoin ParallelCoin
       ParallelCoin ParallelCoin ParallelCoin

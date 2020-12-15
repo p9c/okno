@@ -19,6 +19,7 @@ func GetHosts(db *scribble.Driver) []*Host {
 		api(db),
 		admin(db),
 		okno(db),
+		sokno(db),
 
 		beliRS(db),
 		bitNodesNET(db),
@@ -43,10 +44,16 @@ func GetHosts(db *scribble.Driver) []*Host {
 }
 
 func (h *Host) testRoutes(r *mux.Router) {
-	s := r.Host(h.Host).Subrouter()
+	s := h.sub(r)
 	s.Host(h.Host).Path("/").HandlerFunc(
 		func(w http.ResponseWriter, r *http.Request) {
 			w.WriteHeader(http.StatusOK)
 			fmt.Fprintf(w, "Host: %v\n", h.Name)
 		})
+}
+
+func (h *Host) sub(r *mux.Router) *mux.Router {
+	s := r.Host(h.Host).Subrouter()
+	s.StrictSlash(true)
+	return s
 }

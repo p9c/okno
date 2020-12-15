@@ -25,6 +25,11 @@ func (o *OKNO) Handlers() *mux.Router {
 	for _, host := range host.GetHosts(o.Database) {
 		host.Routes(r)
 	}
+	//r.NotFoundHandler = r.NewRoute().HandlerFunc(http.FileServer(http.Dir("js/errors/404"))).GetHandler()
+
+	//r.NotFoundHandler = r.NewRoute().HandlerFunc(http.NotFound).GetHandler()
+
+	//r.Headers("X-Requested-With", "XMLHttpRequest")
 	return r
 }
 

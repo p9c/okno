@@ -2,170 +2,70 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a968cd5e-e285-4169-b3cb-fa9e03c075aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/auth/auth.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/auth/models/exception.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/auth/models/token.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/auth/models/user.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/handlers/api_user_create.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/handlers/api_user_find.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/app/handlers.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/host/admin.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/host/beli_rs.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/host/bitnodes_net.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/host/comhttp_org.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/host/comhttp_us.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/host/djordje_marcetin_com.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/host/doc_parallelcoin_info.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/host/explorer_parallelcoin_info.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/host/git_parallelcoin_info.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/host/hosts.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/host/log_parallelcoin_info.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/host/marcetin_com.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/host/parallelcoin_info.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/host/punq_rs.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/host/solutions_rs.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/host/user_okno_rs.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/host/vesicapiesces_org.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/host/whitepaper_parallelcoin_info.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/user/users.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/okno.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/1admin2/resources/pages/Index.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/1admin2/resources/pages/Register.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/1admin2/resources/pages/Register.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/admin/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/components/css/colors.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/components/css/svg.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/components/svg/ParallelCoinLogo.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/components/svg/ParallelCoinLogoHole.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/components/svg/ParallelCoinLogoIntro.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/components/svg/Rectangle.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/git/src/pages/1Home.svelte1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/postcss.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/ambient.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/assets/global.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/assets/impress.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/client.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Borg.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Community.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Doc.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Download.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Explorer.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Fun.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Impress.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Intro.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Status.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Step.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Story.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Tailwind.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Video.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/What.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Where.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Why.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/routes/_error.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/routes/_layout.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/routes/index.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/server.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/service-worker.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/src/template.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/static/black-square.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/static/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/static/logo-192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/static/logo-512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/static/logo-contur.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/static/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/static/logo1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/static/logo2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/static/logo3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/static/logo_circle_contur.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/static/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/static/plan9/files/plan9.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/static/plan9/files/plan9.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/static/plan9/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/static/plan9/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/static/square.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/static/videos/grunge.webm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/stylelint.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/svelte.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/tailwind.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/webpack.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/parallelcoin/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/host/sokno.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/txt/Shadow.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/errors/error.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/parallelcoin/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/img/okno.webp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/.prettierrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/get.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/get.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/api_login.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/api_login.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/homepage.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/homepage.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/handlers/post.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/handlers/post.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/hosts/hosts.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/host/okno.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jdb/jdb.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/jdb/jdb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/jorm.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/app/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/app/app.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/app/tester.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/host/admin_okno_rs.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/app/handlers.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/app/handlers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/host/admin.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/host/admin.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/host/api_okno_rs.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/host/api_okno_rs.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/host/host.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/host/okno_rs.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/host/parallelcoin_io.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/host/parallelcoin_io.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/page/create.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/page/create.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/page/page.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/page/page.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/post/get_all.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/post/get_all.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/babel.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/jest.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/admin/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/host/beli_rs.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/host/beli_rs.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/host/doc_parallelcoin_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/host/doc_parallelcoin_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/host/hosts.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/host/hosts.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/host/okno.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/host/okno.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/host/parallelcoin_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/host/parallelcoin_info.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/okno.go" beforeDir="false" afterPath="$PROJECT_DIR$/app/okno.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/admin/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin/rollup.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/admin/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin/src/App.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/admin/src/components/Cards/CardProfile.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin/src/components/Cards/CardProfile.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/admin/src/components/Dropdowns/UserDropdown.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin/src/components/Dropdowns/UserDropdown.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/admin/src/layouts/Auth.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin/src/layouts/Auth.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/admin/src/views/Index.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin/src/views/Index.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/git/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/js/git/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/git/public/extra.css" beforeDir="false" afterPath="$PROJECT_DIR$/js/git/public/extra.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/git/public/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/js/git/public/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/git/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/git/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/git/src/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/git/src/App.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/git/src/components/Navbar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/git/src/components/Navbar.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/git/src/components/UserInfo.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/git/src/components/UserInfo.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/git/src/pages/Home.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/git/src/pages/Home.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/git/src/pages/User.svelte" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/js/themes/default/public/.gitkeep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/App.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/resources/App.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/components/Editor.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/resources/components/Editor.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/components/Editor.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/resources/components/Editor.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/components/Modal.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/resources/components/Modal.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/components/Nav.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/resources/components/Nav.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/components/Notification.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/resources/components/Notification.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/components/Notifications.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/resources/components/Notifications.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/components/Redirect.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/resources/components/Redirect.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/components/TopBar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/resources/components/TopBar.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/helpers/notify.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/resources/helpers/notify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/resources/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/resources/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/pages/CreatePost.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/resources/pages/CreatePost.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/pages/Home.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/resources/pages/Home.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/pages/LogIn.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/resources/pages/LogIn.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/pages/LogIn.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/resources/pages/LogIn.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/pages/NotFound.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/resources/pages/NotFound.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/pages/Pages.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/resources/pages/Pages.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/pages/Pages/PageForm.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/resources/pages/Pages/PageForm.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/pages/Post.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/resources/pages/Post.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/pages/Posts.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/resources/pages/Posts.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/resources/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/stores.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/resources/stores.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/resources/styles/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/test.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seed/seed.go" beforeDir="false" afterPath="$PROJECT_DIR$/seed/seed.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/js/themes/default/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/js/themes/default/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/js/themes/default/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/public/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/resources/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/js/themes/default/resources/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/views/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/themes/default/views/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/views/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/themes/default/views/page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/default/views/post.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/themes/default/views/post.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/1admin2/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/admin/src/views/Profile.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin/src/views/Profile.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/admin/src/views/auth/Login.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin/src/views/auth/Login.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/admin/src/views/auth/Register.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/admin/src/views/auth/Register.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/css/colors.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/colors.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/css/svg.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/svg.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/svg/ParallelCoinLogo.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/svg/ParallelCoinLogo.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/components/svg/ParallelCoinLogoIntro.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/components/svg/ParallelCoinLogoIntro.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/djordjemarcetin/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/djordjemarcetin/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/js/djordjemarcetin/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/djordjemarcetin/site.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/js/djordjemarcetin/site.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/djordjemarcetin/static/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/js/djordjemarcetin/static/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/logparallelcoin/src/components/DisqusComments.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/logparallelcoin/src/components/DisqusComments.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/logparallelcoin/src/components/GithubButton.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/logparallelcoin/src/components/GithubButton.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/logparallelcoin/src/components/LinkedinBadge.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/logparallelcoin/src/components/LinkedinBadge.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/logparallelcoin/src/routes/feed.xml.ts" beforeDir="false" afterPath="$PROJECT_DIR$/js/logparallelcoin/src/routes/feed.xml.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/logparallelcoin/src/routes/index.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/logparallelcoin/src/routes/index.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/js/parallelcoin/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/src/assets/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/js/parallelcoin/src/assets/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/src/components/Borg.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Borg.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/src/components/Community.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Community.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/src/components/Doc.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Doc.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/src/components/Download.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Download.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/src/components/Explorer.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Explorer.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/src/components/Fun.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Fun.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/src/components/Impress.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Impress.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/src/components/Status.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Status.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/src/components/Step.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Step.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/src/components/Story.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Story.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/src/components/Tailwind.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Tailwind.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/src/components/Video.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Video.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/src/components/What.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/What.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/src/components/Why.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/parallelcoin/src/components/Why.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/src/routes/index.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/js/parallelcoin/src/routes/index.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/src/service-worker.ts" beforeDir="false" afterPath="$PROJECT_DIR$/js/parallelcoin/src/service-worker.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/static/plan9/files/plan9.woff" beforeDir="false" afterPath="$PROJECT_DIR$/static/font/plan9/plan9.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/static/plan9/files/plan9.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/static/font/plan9/plan9.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/static/plan9/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/font/plan9/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/static/plan9/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/static/font/plan9/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/static/videos/grunge.webm" beforeDir="false" afterPath="$PROJECT_DIR$/static/video/grunge.webm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/parallelcoin/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/parallelcoin/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,6 +76,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Go File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -198,6 +99,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -205,7 +107,8 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/js/components/css" />
+    <property name="go.vendoring.notification.had.been.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/TMP/block-explorer-frontend" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -215,18 +118,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/js/components/text" />
+      <recent name="$PROJECT_DIR$/static/img" />
+      <recent name="$PROJECT_DIR$/app/models/host" />
       <recent name="$PROJECT_DIR$/js/components/css" />
       <recent name="$PROJECT_DIR$/js/components/svg" />
-      <recent name="$PROJECT_DIR$/js/parallelcoin/static" />
-      <recent name="$PROJECT_DIR$/js/parallelcoin/static/videos" />
-      <recent name="$PROJECT_DIR$/js/parallelcoin/src/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/js/parallelcoin/static" />
-      <recent name="$PROJECT_DIR$/js/parallelcoin/static/videos" />
-      <recent name="$PROJECT_DIR$/js/components/css" />
-      <recent name="$PROJECT_DIR$/js/components" />
-      <recent name="$PROJECT_DIR$/js/parallelcoin/static/plan9/files" />
+      <recent name="$PROJECT_DIR$/static/font/audiowide" />
+      <recent name="$PROJECT_DIR$/static/font" />
+      <recent name="$PROJECT_DIR$/static/font/plan9" />
+      <recent name="$PROJECT_DIR$/static" />
+      <recent name="$PROJECT_DIR$/js/errors" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

@@ -32,7 +32,7 @@ module.exports = {
         ...defaultTheme.fontFamily.sans
       ],
       brand: [
-        'plan9',
+        'plan9regular',
         ...defaultTheme.fontFamily.sans
       ],
       mono: [

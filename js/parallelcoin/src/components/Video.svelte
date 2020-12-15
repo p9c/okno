@@ -15,8 +15,8 @@
   autoplay
   loop
 >
-  <source src="/videos/grunge.mp4" type="video/mp4" />
-  <!-- <source src="/videos/grunge.webm" type="video/webm" /> -->
+  <source src="http://s.okno.rs:4433/video/grunge.mp4" type="video/mp4" />
+  <!-- <source src="http://s.okno.rs:4433/video/grunge.webm" type="video/webm" /> -->
   <p class="vjs-no-js">
     To view this video please enable JavaScript, and consider upgrading to a
     web browser that
@@ -25,7 +25,6 @@
 </video>
 
 <style>
-    @import 'video.js/dist/video-js.css';
      #grunge {
        object-fit: cover;
        width: 100vw;

@@ -1,4 +1,4 @@
-.blue .bottomlayer,.toplayer-blue .toplayer{
+.bottomlayer-blue .bottomlayer,.toplayer-blue .toplayer{
   background:var(--blue-color);
   fill:var(--blue-color);
 }
@@ -9,6 +9,10 @@
 .bottomlayer-darkblue .bottomlayer,.toplayer-darkblue .toplayer{
   background:var(--darkblue-color);
   fill:var(--darkblue-color);
+}
+.bottomlayer-dark .bottomlayer,.bottomlayer-dark .toplayer{
+  background:var(--dark-color);
+  fill:var(--dark-color);
 }
 .bottomlayer-green .bottomlayer,.toplayer-green .toplayer{
   background:var(--green-color);

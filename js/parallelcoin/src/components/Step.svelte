@@ -10,7 +10,7 @@
     <div class="p-10 w-full font-brand uppercase text-4xl font-bold text-left">
       Easy to start. Hard to advance.<br/>Never gets boring.
     </div>
-    <div>
+    <div class="p-10 w-full font-brand uppercase text-1xl font-bold text-left">
       ParallelCoin ParallelCoin ParallelCoin
       ParallelCoin ParallelCoin ParallelCoin
       ParallelCoin ParallelCoin ParallelCoin

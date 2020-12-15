@@ -35,7 +35,7 @@ self.addEventListener('activate', (event: ExtendableEvent) => {
 
 
 /**
- * Fetch the asset from the network and store it in the cache. 
+ * Fetch the asset from the network and store it in the cache.
  * Fall back to the cache if the user is offline.
  */
 async function fetchAndCache(request: Request) {
@@ -67,7 +67,7 @@ self.addEventListener('fetch', (event: FetchEvent) => {
 	if (isHttp && !isDevServerRequest && !skipBecauseUncached) {
 		event.respondWith(
 			(async () => {
-				// always serve static files and bundler-generated assets from cache.
+				// always serve static files and bundler-generated style from cache.
 				// if your application has other URLs with data that will never change,
 				// set this variable to true for them and they will only be fetched once.
 				const cachedAsset = isStaticAsset && await caches.match(event.request);

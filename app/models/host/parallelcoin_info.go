@@ -19,7 +19,7 @@ func parallelcoinINFO(db *scribble.Driver) *Host {
 		s := r.Host(host.Host).Subrouter()
 		s.StrictSlash(true)
 		//s.Headers("X-Requested-With", "XMLHttpRequest")
-		s.PathPrefix("/").Handler(http.FileServer(http.Dir("js/public/parallelcoininfo")))
+		s.PathPrefix("/").Handler(http.FileServer(http.Dir("js/parallelcoin/__sapper__/export")))
 	}
 	host.Routes = routes
 	return host

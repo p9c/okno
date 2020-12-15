@@ -12,18 +12,19 @@ func okno(db *scribble.Driver) *Host {
 	////////////////
 	// okno.RS
 	////////////////
-	host := &Host{
+	h := &Host{
 		Name: "okno",
 		Slug: "okno",
 		Host: "okno.rs",
 	}
 
-	h := handlers.Handlers{jdb.NewJDB(db, host.Slug)}
+	hs := handlers.Handlers{jdb.NewJDB(db, h.Slug)}
 
 	routes := func(r *mux.Router) {
-		r.Headers("X-Requested-With", "XMLHttpRequest")
-		r.Host(host.Host).Path("/").HandlerFunc(h.Homepage()).Name("comhttpus")
-		r.Host(host.Host).Path("/{coin}").HandlerFunc(h.Homepage()).Name("comhttpus")
+		s := h.sub(r)
+		s.Headers("X-Requested-With", "XMLHttpRequest")
+		s.Path("/").HandlerFunc(hs.Homepage()).Name("okno")
+		//s.Path("/{coin}").HandlerFunc(hs.Homepage()).Name("comhttpus")
 		//r.Host(okno).Path("/coins/").HandlerFunc(rts.Coins).Methods("GET")
 		//r.Host(okno).Path("/bitnodes/").HandlerFunc(rts.BitNodes).Methods("GET")
 		//r.Host(okno).Path("/bitnodes/{coin}/{nodeid}").HandlerFunc(rts.BitNode).Methods("GET")
@@ -33,8 +34,8 @@ func okno(db *scribble.Driver) *Host {
 		//
 		//r.Host("api." + okno).Path("/{coin}/i").HandlerFunc(rts.ApiInfo).Name("info")
 	}
-	host.Routes = routes
+	h.Routes = routes
 
-	seed.Seed(jdb.NewJDB(db, host.Slug))
-	return host
+	seed.Seed(jdb.NewJDB(db, h.Slug))
+	return h
 }

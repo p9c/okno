@@ -7,7 +7,7 @@ import (
 
 func docParallelcoinINFO(db *scribble.Driver) *Host {
 	////////////////
-	// parallelcoin.IO
+	// doc.parallelcoin.INFO
 	////////////////
 	host := &Host{
 		Name: "ParallelCoin Documentation",

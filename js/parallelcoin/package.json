@@ -1,11 +1,11 @@
 {
-  "name": "parallelcoin",
+  "name": "ParallelCoin",
   "description": "ParallelCoin",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development sapper dev",
-    "build": "sapper export && mv ./__sapper__/export ./../public/parallelcoininfo",
+    "build": "cross-env NODE_ENV=production sapper build",
     "export": "cross-env NODE_ENV=production sapper export",
     "serve": "serve __sapper__/export",
     "start": "node __sapper__/build",
@@ -17,7 +17,6 @@
     "polka": "next",
     "serve": "^11.3.2",
     "sirv": "^1.0.0",
-    "typeface-audiowide": "^1.1.13",
     "video.js": "^7.10.2"
   },
   "devDependencies": {
