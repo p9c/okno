@@ -2,11 +2,10 @@ package host
 
 import (
 	"github.com/gorilla/mux"
-	scribble "github.com/nanobox-io/golang-scribble"
 	"net/http"
 )
 
-func marcetinCOM(db *scribble.Driver) *Host {
+func marcetinCOM() *Host {
 	////////////////
 	// marcetin.COM
 	////////////////

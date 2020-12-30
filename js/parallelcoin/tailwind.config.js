@@ -29,6 +29,7 @@ module.exports = {
   theme: {
     fontFamily: {
       main: [
+        'bariolregular',
         ...defaultTheme.fontFamily.sans
       ],
       brand: [
@@ -42,6 +43,7 @@ module.exports = {
     palete: {
       black: '#303030',
       white: '#cfcfcf',
+      blue: '#3080cf',
       dark: '#2E3A59',
       'dark-lest': '#DEE8F6',
       'dark-less': '#91A5CD',

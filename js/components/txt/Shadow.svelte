@@ -2,13 +2,13 @@
   export let styleClass;
 </script>
 
-  <h2 class='artificial'><slot/></h2>
+  <h2 class='{styleClass}'><slot /></h2>
   <!--  <h2 class='ambient'><slot/></h2>-->
 
 
 <style>
   h2 {
-    line-height: 100%;
+    line-height: 138pt;
     font-family: plan9regular, "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
     font-size: 100pt;
     text-align: center;
@@ -16,7 +16,6 @@
     text-rendering: optimizeLegibility;
     display: block;
     float: left;
-    padding-bottom: 100pt;
   }
   h2.artificial {
     color: var(--lite-color);

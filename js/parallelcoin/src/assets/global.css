@@ -5,6 +5,13 @@
 
 
 @font-face {
+  font-family: 'bariolregular';
+  src: url('http://s.okno.rs:4433/font/bariol/bariol-regular-webfont.woff2') format('woff2'),
+  url('http://s.okno.rs:4433/font/bariol/bariol-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: 'plan9regular';
   font-style: normal;
   font-display: swap;
@@ -17,5 +24,6 @@
 }
 
 body {
+  font-family: 'bariolregular';
   @apply text-white-default;
 }

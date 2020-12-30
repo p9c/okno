@@ -2,10 +2,9 @@ package host
 
 import (
 	"github.com/gorilla/mux"
-	scribble "github.com/nanobox-io/golang-scribble"
 )
 
-func comhttpORG(db *scribble.Driver) *Host {
+func comhttpORG() *Host {
 	////////////////
 	// com-httpORG
 	////////////////

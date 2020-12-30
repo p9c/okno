@@ -2,11 +2,10 @@ package host
 
 import (
 	"github.com/gorilla/mux"
-	scribble "github.com/nanobox-io/golang-scribble"
 	"net/http"
 )
 
-func admin(db *scribble.Driver) *Host {
+func admin() *Host {
 	////////////////
 	// admin.okno.rs
 	////////////////
@@ -18,7 +17,7 @@ func admin(db *scribble.Driver) *Host {
 	//h := handlers.Handlers{jdb.NewJDB(db, host.Slug)}
 	routes := func(r *mux.Router) {
 		s := h.sub(r)
-		s.PathPrefix("/").Handler(http.FileServer(http.Dir("js/admin/public")))
+		s.PathPrefix("/").Handler(http.FileServer(http.Dir("js/public/admin")))
 	}
 	h.Routes = routes
 	return h

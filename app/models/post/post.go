@@ -1,7 +1,6 @@
 package post
 
 import (
-	"github.com/p9c/okno/app/jdb"
 	"html/template"
 	"time"
 
@@ -11,10 +10,11 @@ import (
 
 // Post contains articles and pages used by the CMS
 type Post struct {
-	ID             string
+	ID             string `schema:"id,required"`
 	Title          string
 	Content        string
 	ContentPreview string
+	CustomFields   map[string]interface{}
 	Slug           string
 	IsDraft        bool
 	Published      bool
@@ -22,10 +22,6 @@ type Post struct {
 	Template       string
 	CreatedAt      time.Time
 	UpdatedAt      time.Time
-}
-
-type item struct {
-	*jdb.JDB
 }
 
 // GetHTMLContent returns the post's markdown content as HTML

@@ -1,13 +1,15 @@
 package app
 
 import (
-	scribble "github.com/nanobox-io/golang-scribble"
+	"github.com/p9c/okno/app/config"
+	"github.com/p9c/okno/app/jdb"
 	"github.com/p9c/okno/app/models/host"
 	"net/http"
 )
 
 type OKNO struct {
-	Database *scribble.Driver
-	Hosts    []*host.Host
-	Server   *http.Server
+	Configuration *config.Config
+	Database      *jdb.JDB
+	Hosts         []*host.Host
+	Server        *http.Server
 }

@@ -2,18 +2,14 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/elianiva.me" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/js/admin" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/js/admina1" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/js/blog" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/js/coderstats" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/js/11admin" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/js/djordjemarcetin" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/js/elianiva.me" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/js/doc" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/js/git" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/js/logparallelcoin" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/js/notus-svelte" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/js/okno" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/js/oknors" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/js/supper-blog" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/js/solutions" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/js/svelte-carousel" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/js/timelinesolutions" vcs="Git" />
   </component>
 </project>

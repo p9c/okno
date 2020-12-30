@@ -1,9 +1,13 @@
 <script lang="js">
   import Shadow from '../../../components/txt/Shadow.svelte';
+  import Divider from '../components/sections/Divider.svelte';
+
+  export let page;
 </script>
 
 
-<div class="step slide" data-x="0" data-y="0" data-scale="0.8" data-autoplay="0.001" />
+
+<Divider />
 
 <div id="welcome" class="step slide" data-x="-140" data-z="-5000" data-scale="6" data-rotate-x="90" data-autoplay="2">
   <div class="w-slide h-slide flex flex-col justify-center items-center">

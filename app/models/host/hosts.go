@@ -3,7 +3,7 @@ package host
 import (
 	"fmt"
 	"github.com/gorilla/mux"
-	scribble "github.com/nanobox-io/golang-scribble"
+	"github.com/p9c/okno/app/jdb"
 	"net/http"
 )
 
@@ -14,32 +14,32 @@ type Host struct {
 	Routes func(r *mux.Router)
 }
 
-func GetHosts(db *scribble.Driver) []*Host {
+func GetHosts(j *jdb.JDB) []*Host {
 	return []*Host{
-		api(db),
-		admin(db),
-		okno(db),
-		sokno(db),
+		//authOKNO(db),
+		//admin(j),
+		okno(),
+		sokno(),
 
-		beliRS(db),
-		bitNodesNET(db),
-		comhttpORG(db),
-		comhttpUS(db),
+		beliRS(),
+		bitNodesNET(),
+		comhttpORG(),
+		comhttpUS(),
 
-		djordjeMarcetinCOM(db),
-		marcetinCOM(db),
+		djordjeMarcetinCOM(),
+		marcetinCOM(),
 
-		parallelcoinIO(db),
-		parallelcoinINFO(db),
-		gitParallelcoinINFO(db),
-		whitepaperParallelcoinINFO(db),
-		docParallelcoinINFO(db),
-		explorerParallelcoinINFO(db),
-		logParallelcoinINFO(db),
+		parallelcoinIO(),
+		parallelcoinINFO(),
+		gitParallelcoinINFO(),
+		whitepaperParallelcoinINFO(),
+		docParallelcoinINFO(),
+		explorerParallelcoinINFO(),
+		logParallelcoinINFO(),
 
-		punqRS(db),
-		solutionsRS(db),
-		vesicaPiescesORG(db),
+		punqRS(),
+		solutionsRS(),
+		vesicaPiescesORG(),
 	}
 }
 
@@ -56,4 +56,15 @@ func (h *Host) sub(r *mux.Router) *mux.Router {
 	s := r.Host(h.Host).Subrouter()
 	s.StrictSlash(true)
 	return s
+}
+
+// CommonMiddleware --Set content-type
+func CommonMiddleware(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Add("Content-Type", "application/json")
+		w.Header().Set("Access-Control-Allow-Origin", "*")
+		w.Header().Set("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE")
+		w.Header().Set("Access-Control-Allow-Headers", "Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, Access-Control-Request-Headers, Access-Control-Request-Method, Connection, Host, Origin, User-Agent, Referer, Cache-Control, X-header")
+		next.ServeHTTP(w, r)
+	})
 }

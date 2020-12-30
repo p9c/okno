@@ -2,10 +2,9 @@ package host
 
 import (
 	"github.com/gorilla/mux"
-	scribble "github.com/nanobox-io/golang-scribble"
 )
 
-func solutionsRS(db *scribble.Driver) *Host {
+func solutionsRS() *Host {
 	////////////////
 	// solutions.RS
 	////////////////

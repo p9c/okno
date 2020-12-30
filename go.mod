@@ -9,6 +9,7 @@ require (
 	github.com/go-playground/validator/v10 v10.0.1
 	github.com/gorilla/handlers v1.5.1
 	github.com/gorilla/mux v1.8.0
+	github.com/gorilla/schema v1.2.0
 	github.com/jcelliott/lumber v0.0.0-20160324203708-dd349441af25 // indirect
 	github.com/joho/godotenv v1.3.0
 	github.com/kylelemons/godebug v1.1.0

@@ -2,13 +2,9 @@ package host
 
 import (
 	"github.com/gorilla/mux"
-	scribble "github.com/nanobox-io/golang-scribble"
-	"github.com/p9c/okno/app/handlers"
-	"github.com/p9c/okno/app/jdb"
-	"github.com/p9c/okno/seed"
 )
 
-func okno(db *scribble.Driver) *Host {
+func okno() *Host {
 	////////////////
 	// okno.RS
 	////////////////
@@ -18,12 +14,12 @@ func okno(db *scribble.Driver) *Host {
 		Host: "okno.rs",
 	}
 
-	hs := handlers.Handlers{jdb.NewJDB(db, h.Slug)}
+	//hs := handlers.Handlers{jdb.NewJDB(db, h.Slug)}
 
 	routes := func(r *mux.Router) {
 		s := h.sub(r)
 		s.Headers("X-Requested-With", "XMLHttpRequest")
-		s.Path("/").HandlerFunc(hs.Homepage()).Name("okno")
+		//s.Path("/").HandlerFunc(hs.Homepage()).Name("okno")
 		//s.Path("/{coin}").HandlerFunc(hs.Homepage()).Name("comhttpus")
 		//r.Host(okno).Path("/coins/").HandlerFunc(rts.Coins).Methods("GET")
 		//r.Host(okno).Path("/bitnodes/").HandlerFunc(rts.BitNodes).Methods("GET")
@@ -36,6 +32,6 @@ func okno(db *scribble.Driver) *Host {
 	}
 	h.Routes = routes
 
-	seed.Seed(jdb.NewJDB(db, h.Slug))
+	//seed.SeedOKNO(jdb.NewJDB(db, h.Slug))
 	return h
 }

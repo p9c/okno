@@ -2,10 +2,9 @@ package host
 
 import (
 	"github.com/gorilla/mux"
-	scribble "github.com/nanobox-io/golang-scribble"
 )
 
-func parallelcoinIO(db *scribble.Driver) *Host {
+func parallelcoinIO() *Host {
 	////////////////
 	// parallelcoin.IO
 	////////////////

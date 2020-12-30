@@ -26,3 +26,4 @@
 /cete_data
 /public/*
 !/public/.gitkeep
+/js/1admin2/node_modules/

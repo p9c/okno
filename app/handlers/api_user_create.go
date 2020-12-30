@@ -56,14 +56,14 @@ func (hs Handlers) APIFetchUsers(w http.ResponseWriter, r *http.Request) {
 }
 
 func (hs Handlers) APIUpdateUser(w http.ResponseWriter, r *http.Request) {
-	params := mux.Vars(r)
-	var id = params["id"]
-	user, err := hs.Read(id)
-	if err != nil {
-	}
-	json.NewDecoder(r.Body).Decode(user)
-	hs.Write(id, user)
-	json.NewEncoder(w).Encode(&user)
+	//params := mux.Vars(r)
+	//var id = params["id"]
+	//user, err := hs.Read(id)
+	//if err != nil {
+	//}
+	//json.NewDecoder(r.Body).Decode(user)
+	//hs.Write(id, user)
+	//json.NewEncoder(w).Encode(&user)
 }
 func (hs Handlers) APIDeleteUser(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)

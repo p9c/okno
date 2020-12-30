@@ -2,27 +2,43 @@ package seed
 
 import (
 	"github.com/p9c/okno/app/jdb"
-	"github.com/p9c/okno/app/models/page"
 	"github.com/p9c/okno/app/models/post"
 )
 
-func Seed(j *jdb.JDB) error {
-	j.Collection("posts")
-	posts, err := seedPosts(j)
-	if err != nil {
-		return err
-	}
+type postImport struct {
+	ID        string
+	Title     string
+	Content   string
+	Slug      string
+	CreatedAt string
+	UpdatedAt string
+}
 
-	_, err = page.Create(j, (*posts)[0].ID, 1, "about-my-vacation", true)
+var (
+	timeLayout = "22. January 2014."
+)
+
+func SeedOKNO(j *jdb.JDB) error {
+	j.Collection("posts")
+	err := seedPosts(j, getOKNOPosts)
 	if err != nil {
 		return err
 	}
 	return nil
 }
 
-func seedPosts(j *jdb.JDB) (*[]post.Post, error) {
+func SeedParallelCoin(j *jdb.JDB) error {
+	j.Collection("pages")
+	err := seedPosts(j, getParallelCoinPages)
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func seedPosts(j *jdb.JDB, s func() []post.Post) error {
 	posts := []post.Post{}
-	for _, p := range getPosts() {
+	for _, p := range s() {
 		post, err := post.Create(
 			j,
 			p.Title,
@@ -31,9 +47,9 @@ func seedPosts(j *jdb.JDB) (*[]post.Post, error) {
 			p.IsDraft,
 		)
 		if err != nil {
-			return nil, err
+			return err
 		}
 		posts = append(posts, post)
 	}
-	return &posts, nil
+	return nil
 }
